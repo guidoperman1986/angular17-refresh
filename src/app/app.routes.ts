@@ -49,6 +49,11 @@ export const routes: Routes = [
             loadComponent: () => import('./dashboard/pages/view-transition/view-transition.component2'),
           },
           {
+            path: 'hosts',
+            title: 'Binding and Listener',
+            loadComponent: () => import('./dashboard/pages/hosts/hosts.component'),
+          },
+          {
             path:'', redirectTo: 'control-flow', pathMatch: 'full',
           }
     ]
