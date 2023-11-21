@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "sourceMap": true,
             "outputPath": "dist/my-dashboard",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -63,7 +64,7 @@
               "buildTarget": "myDashboard:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "production"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
