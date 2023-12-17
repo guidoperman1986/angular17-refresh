@@ -54,6 +54,11 @@ export const routes: Routes = [
             loadComponent: () => import('./dashboard/pages/hosts/hosts.component'),
           },
           {
+            path: 'signal-store',
+            title: 'Signal Store',
+            loadComponent: () => import('./dashboard/pages/signalStore/signalStore.component'),
+          },
+          {
             path:'', redirectTo: 'control-flow', pathMatch: 'full',
           }
     ]
