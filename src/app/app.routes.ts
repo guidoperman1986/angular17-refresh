@@ -59,6 +59,11 @@ export const routes: Routes = [
             loadComponent: () => import('./dashboard/pages/signalStore/signalStore.component'),
           },
           {
+            path: 'ng-content',
+            title: 'Content Projection',
+            loadComponent: () => import('./dashboard/pages/content-projection-father/content-projection-father.component'),
+          },
+          {
             path:'', redirectTo: 'control-flow', pathMatch: 'full',
           }
     ]

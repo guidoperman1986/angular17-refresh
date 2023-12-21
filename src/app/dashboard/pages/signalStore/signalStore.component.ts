@@ -24,7 +24,6 @@ export default class SignalStoreComponent implements OnInit {
   store = inject(CounterStore);
 
   ngOnInit(): void {
-      console.log(this.store.count)
   }
 
 
