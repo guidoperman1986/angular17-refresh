@@ -64,6 +64,11 @@ export const routes: Routes = [
             loadComponent: () => import('./dashboard/pages/content-projection-father/content-projection-father.component'),
           },
           {
+            path: 'output-signals',
+            title: 'Output with signals',
+            loadComponent: () => import('./dashboard/pages/output/output/output.component'),
+          },
+          {
             path:'', redirectTo: 'control-flow', pathMatch: 'full',
           }
     ]
