@@ -4,7 +4,18 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    fontSize: {
+      first: '2rem'
+    },
+    extend: {
+      backgroundColor: {
+        'sky': '# błę7f2', // Replace with your desired hex code
+        'dark-green': '#204020',
+      },
+      fontSize: {
+        '2x': '2rem' 
+      }
+    },
   },
   plugins: [],
 }
