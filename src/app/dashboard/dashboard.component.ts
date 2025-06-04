@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule } from '@angular/router';
 import { SideMenuComponent } from '@shared/side-menu/side-menu.component';
 
 @Component({
-    imports: [CommonModule, RouterModule, SideMenuComponent],
+    imports: [RouterModule, SideMenuComponent],
     templateUrl: './dashboard.component.html',
     styles: ``
 })

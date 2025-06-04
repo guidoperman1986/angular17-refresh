@@ -1,13 +1,12 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, TemplateRef, ViewChild } from '@angular/core';
 import { ContentProjectionGrandChildComponent } from '../content-projection-grand-child/content-projection-grand-child.component';
 
 @Component({
     selector: 'app-content-projection-child',
     imports: [
-        CommonModule,
-        ContentProjectionGrandChildComponent
-    ],
+    ContentProjectionGrandChildComponent
+],
     template: `
     <app-content-projection-grand-child>
       <div class="card-layout-title">

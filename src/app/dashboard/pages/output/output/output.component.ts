@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import {
     ChangeDetectionStrategy,
     Component,
@@ -37,7 +37,7 @@ export class OutputChildComponent {
 
 @Component({
     selector: 'app-output',
-    imports: [CommonModule, OutputChildComponent],
+    imports: [OutputChildComponent],
     template: `
     <div>
       <h1 class="text-2x">Output with signals</h1>

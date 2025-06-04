@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { TitleComponent } from '@shared/title/title.component';
 
 @Component({
-    imports: [CommonModule, TitleComponent],
+    imports: [TitleComponent],
     template: `
     <app-title title="View Transition 1"></app-title>
 

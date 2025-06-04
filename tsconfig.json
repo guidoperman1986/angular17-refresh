@@ -1,11 +1,17 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
-  "compilerOptions": {    
+  "compilerOptions": {
     "paths": {
-      "@shared/*": ["./src/app/shared/*"],
-      "@interfaces/*": ["./src/app/interfaces/*"],
-      "@services/*": ["./src/app/services/*"]
+      "@shared/*": [
+        "./src/app/shared/*"
+      ],
+      "@interfaces/*": [
+        "./src/app/interfaces/*"
+      ],
+      "@services/*": [
+        "./src/app/services/*"
+      ]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -18,7 +24,7 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",

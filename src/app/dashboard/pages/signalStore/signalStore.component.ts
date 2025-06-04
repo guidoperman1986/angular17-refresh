@@ -1,12 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { CounterStore } from '../../store/singal-store';
 
 @Component({
     selector: 'app-signal-store',
-    imports: [
-        CommonModule,
-    ],
+    imports: [],
     template: `
     <h1>Counter (signalStore)</h1>
     <p>Count {{store.count()}}</p>

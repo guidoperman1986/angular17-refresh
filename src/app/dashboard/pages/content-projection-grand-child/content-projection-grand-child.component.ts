@@ -1,11 +1,9 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
     selector: 'app-content-projection-grand-child',
-    imports: [
-        CommonModule,
-    ],
+    imports: [],
     template: `  
     <ng-content select=".card-layout-title"></ng-content>
     <ng-content select="img"></ng-content>

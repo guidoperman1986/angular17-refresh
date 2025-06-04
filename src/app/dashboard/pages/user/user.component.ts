@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, computed, inject, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { UsersService } from '@services/users.service';
 import { TitleComponent } from '@shared/title/title.component';
 import { ActivatedRoute, RouterModule } from '@angular/router';
@@ -8,7 +8,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { switchMap } from 'rxjs';
 
 @Component({
-    imports: [CommonModule, TitleComponent, RouterModule],
+    imports: [TitleComponent, RouterModule],
     templateUrl: './user.component.html',
     styles: ``
 })
