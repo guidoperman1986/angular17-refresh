@@ -1,7 +1,7 @@
 import { ApplicationConfig, importProvidersFrom, isDevMode } from '@angular/core';
 import { provideRouter, withComponentInputBinding, withViewTransitions } from '@angular/router';
 
-import { HttpClientModule } from '@angular/common/http';
+import {} from '@angular/common/http';
 import { routes } from './app.routes';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 
