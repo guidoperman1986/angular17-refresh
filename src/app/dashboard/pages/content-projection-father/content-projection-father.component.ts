@@ -3,13 +3,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ContentProjectionChildComponent } from '../content-projection-child/content-projection-child.component';
 
 @Component({
-  selector: 'app-content-projection-father',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ContentProjectionChildComponent
-  ],
-  template: `
+    selector: 'app-content-projection-father',
+    imports: [
+        CommonModule,
+        ContentProjectionChildComponent
+    ],
+    template: `
     <app-content-projection-child>
       <div class="card-layout-title">
         <h1>Content Projection</h1>
@@ -23,8 +22,8 @@ import { ContentProjectionChildComponent } from '../content-projection-child/con
 
   
   `,
-  styleUrl: './content-projection-father.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    styleUrl: './content-projection-father.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class ContentProjectionFatherComponent {
   isImgLoaded!: boolean;

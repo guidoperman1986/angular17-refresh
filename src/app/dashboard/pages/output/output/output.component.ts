@@ -36,10 +36,9 @@ export class OutputChildComponent {
 }
 
 @Component({
-  selector: 'app-output',
-  standalone: true,
-  imports: [CommonModule, OutputChildComponent],
-  template: `
+    selector: 'app-output',
+    imports: [CommonModule, OutputChildComponent],
+    template: `
     <div>
       <h1 class="text-2x">Output with signals</h1>
     </div>
@@ -51,8 +50,8 @@ export class OutputChildComponent {
 
     <div>Click count: {{ clickCount }}</div>
   `,
-  styleUrl: './output.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    styleUrl: './output.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class OutputComponent {
   clickCount = 0;

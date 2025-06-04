@@ -3,13 +3,12 @@ import { ChangeDetectionStrategy, Component, TemplateRef, ViewChild } from '@ang
 import { ContentProjectionGrandChildComponent } from '../content-projection-grand-child/content-projection-grand-child.component';
 
 @Component({
-  selector: 'app-content-projection-child',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ContentProjectionGrandChildComponent
-  ],
-  template: `
+    selector: 'app-content-projection-child',
+    imports: [
+        CommonModule,
+        ContentProjectionGrandChildComponent
+    ],
+    template: `
     <app-content-projection-grand-child>
       <div class="card-layout-title">
         <ng-content select=".card-layout-title"></ng-content>
@@ -19,8 +18,8 @@ import { ContentProjectionGrandChildComponent } from '../content-projection-gran
 
     </app-content-projection-grand-child>
   `,
-  styleUrl: './content-projection-child.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    styleUrl: './content-projection-child.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContentProjectionChildComponent { 
   /* @ViewChild('contentTemplate') contentTemplate!: TemplateRef<any>; */

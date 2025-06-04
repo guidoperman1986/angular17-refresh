@@ -4,10 +4,9 @@ import { RouterModule } from '@angular/router';
 import { SideMenuComponent } from '@shared/side-menu/side-menu.component';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, RouterModule, SideMenuComponent],
-  templateUrl: './dashboard.component.html',
-  styles: ``
+    imports: [CommonModule, RouterModule, SideMenuComponent],
+    templateUrl: './dashboard.component.html',
+    styles: ``
 })
 export class DashboardComponent {
   public showContent = signal(false)

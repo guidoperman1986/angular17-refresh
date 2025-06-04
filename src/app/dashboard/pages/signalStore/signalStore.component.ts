@@ -3,12 +3,11 @@ import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/cor
 import { CounterStore } from '../../store/singal-store';
 
 @Component({
-  selector: 'app-signal-store',
-  standalone: true,
-  imports: [
-    CommonModule,
-  ],
-  template: `
+    selector: 'app-signal-store',
+    imports: [
+        CommonModule,
+    ],
+    template: `
     <h1>Counter (signalStore)</h1>
     <p>Count {{store.count()}}</p>
 
@@ -17,8 +16,8 @@ import { CounterStore } from '../../store/singal-store';
     <button class="bg-blue-500 mr-4 p-2 rounded text-white" (click)="store.reset()">Reset</button>
   
   `,
-  styleUrl: './signalStore.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    styleUrl: './signalStore.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class SignalStoreComponent implements OnInit { 
   store = inject(CounterStore);

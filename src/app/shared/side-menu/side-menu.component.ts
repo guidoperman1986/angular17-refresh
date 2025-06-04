@@ -4,11 +4,10 @@ import { routes } from '../../app.routes';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-side-menu',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './side-menu.component.html',
-  styleUrl: './side-menu.component.css',
+    selector: 'app-side-menu',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './side-menu.component.html',
+    styleUrl: './side-menu.component.css'
 })
 export class SideMenuComponent {
   public menuItems = routes

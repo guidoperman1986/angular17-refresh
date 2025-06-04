@@ -3,17 +3,16 @@ import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/c
 import { CommonModule } from '@angular/common';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, TitleComponent],
-  template: `
+    imports: [CommonModule, TitleComponent],
+    template: `
     <app-title [title]="currentFramework()"></app-title>
 
     <pre>{{ frameworkAsSignal() | json }}</pre>
 
     <pre>{{ frameworkAsProperty | json }}</pre>
   `,
-  styles: ``,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    styles: ``,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class ChangeDetectionComponent {
   public currentFramework = computed(()=> `Change detection - ${this.frameworkAsSignal().name}` )

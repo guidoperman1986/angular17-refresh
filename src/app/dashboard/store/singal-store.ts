@@ -1,7 +1,7 @@
 import { patchState, signalStore, withMethods, withState } from "@ngrx/signals";
 
 export const CounterStore = signalStore(
-    { providedIn: 'root' },
+    { providedIn: 'root', protectedState: false },
     withState({count: 0}),
     withMethods(({count, ...store}) => ({
         increment() {

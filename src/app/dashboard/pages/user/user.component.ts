@@ -8,10 +8,9 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { switchMap } from 'rxjs';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, TitleComponent, RouterModule],
-  templateUrl: './user.component.html',
-  styles: ``,
+    imports: [CommonModule, TitleComponent, RouterModule],
+    templateUrl: './user.component.html',
+    styles: ``
 })
 export default class UserComponent implements OnInit {
   public usersService = inject(UsersService);
