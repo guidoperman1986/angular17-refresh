@@ -1,14 +1,13 @@
-import { ApplicationConfig, importProvidersFrom, isDevMode } from '@angular/core';
+import { ApplicationConfig, isDevMode } from '@angular/core';
 import { provideRouter, withComponentInputBinding, withViewTransitions } from '@angular/router';
 
-import {} from '@angular/common/http';
-import { routes } from './app.routes';
+import { provideHttpClient } from '@angular/common/http';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    importProvidersFrom(HttpClientModule),
-    /* provideHttpClient(), */
+    provideHttpClient(),
     provideRouter(
       routes,
       withComponentInputBinding(),

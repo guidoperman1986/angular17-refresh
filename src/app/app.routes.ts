@@ -69,6 +69,11 @@ export const routes: Routes = [
             loadComponent: () => import('./dashboard/pages/output/output/output.component'),
           },
           {
+            path: 'signals',
+            title: 'Signals',
+            loadComponent: () => import('./dashboard/pages/signals/signals.component'),
+          },
+          {
             path:'', redirectTo: 'control-flow', pathMatch: 'full',
           }
     ]

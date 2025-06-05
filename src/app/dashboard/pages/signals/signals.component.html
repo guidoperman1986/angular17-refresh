@@ -1,0 +1,77 @@
+<!-- signals.component.html -->
+<div class="container">
+    <h1 class="text-3xl font-bold">Video Time Calculator</h1>
+
+    <form [formGroup]="videoForm">
+        <div class="form-group mt-4">
+            <label for="videoTitle">Video Title</label>
+            <input 
+                type="text" 
+                id="videoTitle" 
+                formControlName="videoTitle" 
+                placeholder="Enter video title"
+            >
+        </div>
+
+        <div class="form-group">
+            <label class="text-2xl font-bold">Video Duration</label>
+            <div style="display: flex; gap: 1rem;">
+                <div style="flex: 1;">
+                    <label for="hours">Hours</label>
+                    <input 
+                        type="number" 
+                        id="hours" 
+                        formControlName="hours" 
+                        min="0"
+                        max="1000"
+                    >
+                </div>
+                <div style="flex: 1;">
+                    <label for="minutes">Minutes</label>
+                    <input 
+                        type="number" 
+                        id="minutes" 
+                        formControlName="minutes" 
+                        min="0" 
+                        max="59"
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="dailyFreeTime">Daily Free Time (minutes)</label>
+            <input type="number" id="dailyFreeTime" [formControl]="dailyFreeTime" min="1" max="1440">
+        </div>
+
+        <button (click)="addVideo()" [disabled]="!videoForm.valid">
+            Add Video
+        </button>
+    </form>
+
+    @if (videos().length > 0) {
+    <div class="video-list">
+        <h3>Your Videos</h3>
+        @for (video of videos(); track $index) {
+            <div class="video-item">
+                <strong>{{ video.title }}</strong> 
+                <span>{{ formatDuration(video.duration) }} </span> 
+                <button (click)="removeVideo(video.id)">Remove</button>
+            </div>
+        }
+
+        
+    </div>
+    }
+
+    
+    <div class="result">
+      <p>Total video time: {{ formatDuration(totalVideoTime()) }}</p>
+      @if (dailyRemainingTime() > 0) {
+          <p>Daily remaining time: {{ dailyRemainingTime() }} minutes</p>
+      } @else {
+          <p class="error">You don't have free time.</p>
+      }      
+      <p>You'll need <strong>{{ daysNeeded() }} day(s)</strong> to watch all videos.</p>      
+    </div>
+  </div> 

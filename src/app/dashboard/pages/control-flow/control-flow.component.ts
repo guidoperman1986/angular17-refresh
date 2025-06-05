@@ -1,13 +1,14 @@
 import { Component, signal } from '@angular/core';
 
 import { TitleComponent } from "../../../shared/title/title.component";
+import { TooltipDirective } from '../../directives/tooltip/tooltip.directive';
 
 type Grade = 'A' | 'B' | 'F';
 
 @Component({
-    templateUrl: './control-flow.component.html',
-    styles: ``,
-    imports: [TitleComponent]
+  templateUrl: './control-flow.component.html',
+  styles: ``,
+  imports: [TitleComponent, TooltipDirective]
 })
 export default class ControlFlowComponent {
   showContent = signal(false);
