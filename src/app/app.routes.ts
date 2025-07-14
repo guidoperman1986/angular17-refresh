@@ -4,84 +4,89 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     loadComponent: () =>
-      import('./dashboard/dashboard.component').then(
+      import('./features/dashboard/dashboard.component').then(
         (c) => c.DashboardComponent
       ),
     children: [
         {
             path: 'change-detection',
             title: 'Change Detection',
-            loadComponent: () => import('./dashboard/pages/change-detection/change-detection.component'),
+            loadComponent: () => import('./features/dashboard/pages/change-detection/change-detection.component'),
           },
           {
             path: 'control-flow',
             title: 'Control Flow',
-            loadComponent: () => import('./dashboard/pages/control-flow/control-flow.component'),
+            loadComponent: () => import('./features/dashboard/pages/control-flow/control-flow.component'),
           },
           {
             path: 'defer-options',
             title: 'Defer Options',
-            loadComponent: () => import('./dashboard/pages/defer-options/defer-options.component'),
+            loadComponent: () => import('./features/dashboard/pages/defer-options/defer-options.component'),
           },
           {
             path: 'defer-views',
             title: 'Defer Views',
-            loadComponent: () => import('./dashboard/pages/defer-views/defer-views.component'),
+            loadComponent: () => import('./features/dashboard/pages/defer-views/defer-views.component'),
           },
           {
             path: 'user/:id',
             title: 'User View',
-            loadComponent: () => import('./dashboard/pages/user/user.component'),
+            loadComponent: () => import('./features/dashboard/pages/user/user.component'),
           },
           {
             path: 'user-list',
             title: 'User List',
-            loadComponent: () => import('./dashboard/pages/users/users.component'),
+            loadComponent: () => import('./features/dashboard/pages/users/users.component'),
           },
           {
             path: 'view-transition-1',
             title: 'View Transition 1',
-            loadComponent: () => import('./dashboard/pages/view-transition/view-transition.component1'),
+            loadComponent: () => import('./features/dashboard/pages/view-transition/view-transition.component1'),
           },
           {
             path: 'view-transition-2',
             title: 'View Transition 2',
-            loadComponent: () => import('./dashboard/pages/view-transition/view-transition.component2'),
+            loadComponent: () => import('./features/dashboard/pages/view-transition/view-transition.component2'),
           },
           {
             path: 'hosts',
             title: 'Binding and Listener',
-            loadComponent: () => import('./dashboard/pages/hosts/hosts.component'),
+            loadComponent: () => import('./features/dashboard/pages/hosts/hosts.component'),
           },
           {
             path: 'signal-store',
             title: 'Signal Store',
-            loadComponent: () => import('./dashboard/pages/signalStore/signalStore.component'),
+            loadComponent: () => import('./features/dashboard/pages/signalStore/signalStore.component'),
           },
           {
             path: 'ng-content',
             title: 'Content Projection',
-            loadComponent: () => import('./dashboard/pages/content-projection-father/content-projection-father.component'),
+            loadComponent: () => import('./features/dashboard/pages/content-projection-father/content-projection-father.component'),
           },
           {
             path: 'output-signals',
             title: 'Output with signals',
-            loadComponent: () => import('./dashboard/pages/output/output/output.component'),
+            loadComponent: () => import('./features/dashboard/pages/output/output/output.component'),
           },
           {
             path: 'signals',
             title: 'Signals',
-            loadComponent: () => import('./dashboard/pages/signals/signals.component'),
+            loadComponent: () => import('./features/dashboard/pages/signals/signals.component'),
           },
           {
             path: 'advanced-signals',
             title: 'Advanced Signals',
-            loadComponent: () => import('./dashboard/pages/advanced-signals/advanced-signals.component'),
+            loadComponent: () => import('./features/dashboard/pages/advanced-signals/advanced-signals.component'),
           },
           {
             path: 'resource-patterns',
             title: 'Resource Patterns',
-            loadComponent: () => import('./dashboard/pages/resource-patterns/resource-patterns.component'),
+            loadComponent: () => import('./features/dashboard/pages/resource-patterns/resource-patterns.component'),
+          },
+          {
+            path: 'typescript-patterns',
+            title: 'TypeScript Patterns',
+            loadComponent: () => import('./features/dashboard/pages/typescript-patterns/typescript-patterns.component'),
           },
           {
             path:'', redirectTo: 'control-flow', pathMatch: 'full',

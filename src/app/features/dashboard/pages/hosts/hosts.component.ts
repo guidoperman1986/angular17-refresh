@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { TitleComponent } from '@shared/title/title.component';
-import { RainbowDirective } from '../../directives/rainbow.directive';
+import { TitleComponent } from '@shared/index';
+import { RainbowDirective } from '@shared/index';
 
 @Component({
     selector: 'app-hosts',

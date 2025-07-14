@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-
-import { TitleComponent } from '@shared/title/title.component';
+import { TitleComponent } from '@shared/index';
 
 @Component({
     imports: [TitleComponent],
     template: `
-    <app-title title="View Transition 1"></app-title>
+    <app-title title="View Transition 2"></app-title>
 
-    <section class="flex justify-start">
+    <section class="flex justify-end">
       <img
         srcset="https://picsum.photos/200/300"
         alt="Picsum0"
@@ -17,7 +16,7 @@ import { TitleComponent } from '@shared/title/title.component';
       />
 
       <div
-        class="bg-blue-500 w-56 h-56"
+        class="bg-blue-800 w-40 h-40 rounded"
         style="view-transition-name: hero2"
       ></div>
     </section>

@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 
-import { UsersService } from '@services/users.service';
-import { TitleComponent } from '@shared/title/title.component';
+import { UsersService } from '@core/services/users.service';
+import { TitleComponent } from '@shared/index';
 import { RouterModule } from '@angular/router';
 
 @Component({

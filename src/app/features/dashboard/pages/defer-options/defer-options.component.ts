@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
-import { HeavyLoadersFastComponent } from '@shared/heavy-loaders/heavy-loaders-fast.component';
-import { TitleComponent } from '@shared/title/title.component';
+import { HeavyLoadersFastComponent, TitleComponent } from '@shared/index';
 
 @Component({
     imports: [HeavyLoadersFastComponent, TitleComponent],

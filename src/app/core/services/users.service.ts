@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, inject, signal } from '@angular/core';
-import { User, UserResponse, UsersResponse } from '@interfaces/req-res.interface';
+import { User, UserResponse, UsersResponse } from '../../types/req-res.interface';
 import { delay, map } from 'rxjs';
 
 interface State {

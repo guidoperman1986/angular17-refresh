@@ -1,7 +1,6 @@
 import { Component, signal } from '@angular/core';
 
-import { TitleComponent } from "../../../shared/title/title.component";
-import { TooltipDirective } from '../../directives/tooltip/tooltip.directive';
+import { TitleComponent, TooltipDirective } from "@shared/index";
 
 type Grade = 'A' | 'B' | 'F';
 

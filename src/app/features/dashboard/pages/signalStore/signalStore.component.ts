@@ -1,7 +1,8 @@
 
 import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { CounterStore } from '../../store/singal-store';
-import { TooltipDirective } from '../../directives/tooltip/tooltip.directive';
+import { TooltipDirective } from '@shared/index';
+
 
 @Component({
     selector: 'app-signal-store',

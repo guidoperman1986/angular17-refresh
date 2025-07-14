@@ -1,9 +1,9 @@
 import { Component, Input, OnInit, computed, inject, signal } from '@angular/core';
 
-import { UsersService } from '@services/users.service';
-import { TitleComponent } from '@shared/title/title.component';
+import { UsersService } from '../../../../core/services/users.service';
+import { TitleComponent } from '../../../../shared/components/title/title.component';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { User } from '@interfaces/req-res.interface';
+import { User } from '../../../../types/req-res.interface';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { switchMap } from 'rxjs';
 
