@@ -9,6 +9,6 @@ import { SideMenuComponent } from '@shared/side-menu/side-menu.component';
     styles: ``
 })
 export class DashboardComponent {
-  public showContent = signal(false)
+  
   
 }

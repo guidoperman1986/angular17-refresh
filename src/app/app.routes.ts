@@ -74,6 +74,16 @@ export const routes: Routes = [
             loadComponent: () => import('./dashboard/pages/signals/signals.component'),
           },
           {
+            path: 'advanced-signals',
+            title: 'Advanced Signals',
+            loadComponent: () => import('./dashboard/pages/advanced-signals/advanced-signals.component'),
+          },
+          {
+            path: 'resource-patterns',
+            title: 'Resource Patterns',
+            loadComponent: () => import('./dashboard/pages/resource-patterns/resource-patterns.component'),
+          },
+          {
             path:'', redirectTo: 'control-flow', pathMatch: 'full',
           }
     ]

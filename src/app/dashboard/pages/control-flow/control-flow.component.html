@@ -13,46 +13,46 @@
     </button>
 
     @if (showContent()) {
-    <p>Hola mundo</p>
+      <p>Hola mundo</p>
     } @else {
-    <p>Hace click!</p>
+      <p>Hace click!</p>
     }
   </div>
   <!-- switch -->
   <div class="bg-white rounded shadow p-10">
     <h2 class="text-3xl">{{ grade() }}</h2>
-    @switch (grade()) { @case ('A') {
-    <p>Sos un capo</p>
-    } @case ('B') {
-    <p>Vas bien</p>
-    } @case ('F') {
-    <p>Vas a marzo</p>
-    } }
+    @switch (grade()) { 
+      @case ('A') {
+        <p>Sos un capo</p>
+      } @case ('B') {
+        <p>Vas bien</p>
+      } @case ('F') {
+        <p>Vas a marzo</p>
+      } 
+    }
   </div>
 
   <div class="bg-white rounded shadow p-10">
     <ul>
-      @for (framework of framworks(); track framworks; let i = $index, first =
-      $first, last = $last, count = $count) {
-      <li
-        [class]="{
-          'bg-red-100': !first && !last,
-          'bg-green-100': first || last
-        }"
-      >
-        {{ i + 1 }}/ {{ count }} - {{ framework }}
-      </li>
+      @for (framework of framworks(); track framework; let i = $index, first = $first, last = $last, count = $count) {
+        <li
+          class="p-2"
+          [class.bg-red-100]="!first && !last"
+          [class.bg-green-100]="first || last"
+        >
+          {{ i + 1 }}/ {{ count }} - {{ framework }}
+        </li>
       }
     </ul>
   </div>
 
   <div class="bg-white rounded shadow p-10">
     <ul>
-      @for (framework of framworks2(); track framworks; let i = $index) {
-      <li>{{ framework }}</li>
-      } @empty {
-      <li>No hay frameworks agregados</li>
-      }
+        @for (framework of framworks2(); track framework; let i = $index) {
+          <li>{{ framework }}</li>
+        } @empty {
+          <li>No hay frameworks agregados</li>
+        }
     </ul>
   </div>
 </section>

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SideMenuComponent } from './side-menu.component';
+import { provideRouter } from '@angular/router';
 
 describe('SideMenuComponent', () => {
   let component: SideMenuComponent;
@@ -8,7 +9,8 @@ describe('SideMenuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SideMenuComponent]
+      imports: [SideMenuComponent],
+      providers: [provideRouter([])]
     })
     .compileComponents();
     

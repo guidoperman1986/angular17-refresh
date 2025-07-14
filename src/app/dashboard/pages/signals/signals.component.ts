@@ -34,7 +34,6 @@ export default class SignalsComponent implements OnInit {
   });
 
   daysNeeded = computed(() => {    
-    console.log(Math.ceil(this.totalVideoTime() / this.dailyFreeTime.value!))
     return Math.ceil(this.totalVideoTime() / this.dailyFreeTime.value!);
   });
 
