@@ -1,0 +1,70 @@
+<div class="mb-5">
+    <app-title title="Pipes Usage - Time ago pipe" [withShadow]="true"></app-title>
+    
+    <div class="flex items-center">
+        <input 
+            type="date" 
+            name="date" 
+            id="date" 
+            [(ngModel)]="date" 
+            class="p-2 border rounded mr-3" 
+        />
+        
+        @if (date) {
+            <p>{{ date | timeAgo }}</p>    
+        } @else {
+            <p>No date selected</p>
+        }
+    </div>
+</div>
+
+<div class="mb-5">
+    <app-title title="Pipes Usage - Initials" [withShadow]="true"></app-title>
+    
+    <div class="flex items-center">
+        <input 
+            type="text" 
+            name="name" 
+            id="name" 
+            placeholder="Enter your name" 
+            class="p-2 border rounded mr-3" 
+            [(ngModel)]="name"
+        />
+        
+        @if (name) {
+            <p>{{ name | initialPipe }}</p>
+        } @else {
+            <p>No name entered</p>
+        }
+    </div>
+</div>
+
+<div class="mb-5">
+    <app-title title="Pipes Usage - Highlight"></app-title>
+
+    <div class="flex items-center">
+        <input 
+            type="text" 
+            name="text" 
+            id="text" 
+            placeholder="Enter text to highlight" 
+            class="p-2 border rounded mr-3" 
+            [(ngModel)]="text"
+        />
+        
+        <input 
+            type="text" 
+            name="searchTerm" 
+            id="searchTerm" 
+            placeholder="Enter search term" 
+            class="p-2 border rounded mr-3" 
+            [(ngModel)]="searchTerm"
+        />
+        
+        @if (text && searchTerm) {
+            <p [innerHTML]="text | highlightText: searchTerm"></p>
+        } @else {
+            <p>No text or search term entered</p>
+        }
+
+    </div>

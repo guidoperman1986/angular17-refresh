@@ -89,6 +89,11 @@ export const routes: Routes = [
             loadComponent: () => import('./features/dashboard/pages/typescript-patterns/typescript-patterns.component'),
           },
           {
+            path: 'pipes-usage',
+            title: 'Pipes Usage',
+            loadComponent: () => import('./features/dashboard/pages/pipes-usage/pipes-usage.component'),
+          },
+          {
             path:'', redirectTo: 'control-flow', pathMatch: 'full',
           }
     ]
