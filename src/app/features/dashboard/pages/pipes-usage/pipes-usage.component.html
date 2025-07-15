@@ -10,8 +10,8 @@
             class="p-2 border rounded mr-3" 
         />
         
-        @if (date) {
-            <p>{{ date | timeAgo }}</p>    
+        @if (date() !== null) {
+            <p>{{ date() | timeAgo }}</p>    
         } @else {
             <p>No date selected</p>
         }
@@ -31,8 +31,8 @@
             [(ngModel)]="name"
         />
         
-        @if (name) {
-            <p>{{ name | initialPipe }}</p>
+        @if (name()) {
+            <p>{{ name() | initialPipe }}</p>
         } @else {
             <p>No name entered</p>
         }
@@ -61,8 +61,8 @@
             [(ngModel)]="searchTerm"
         />
         
-        @if (text && searchTerm) {
-            <p [innerHTML]="text | highlightText: searchTerm"></p>
+        @if (text() && searchTerm()) {
+            <p [innerHTML]="text() | highlightText: searchTerm()"></p>
         } @else {
             <p>No text or search term entered</p>
         }

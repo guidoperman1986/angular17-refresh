@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TitleComponent } from '@shared/index';
 import { TimeAgoPipe } from '@shared/pipes/time-ago.pipe';
@@ -12,11 +12,11 @@ import { HighlightTextPipe } from "../../../../shared/pipes/highlight-text.pipe"
   styles: ``
 })
 export default class PipesUsageComponent {
-  date: Date | null = null;
-  name: string | null = null;
+  date = signal<Date | string>('');
+  name = signal<string | null>(null);
 
-  text: string = '';
-  searchTerm: string = '';;
+  text = signal<string>('');
+  searchTerm = signal<string>('');
 
 }
 

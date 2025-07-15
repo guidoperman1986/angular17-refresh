@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { TitleComponent } from '@shared/index';
+import PipesUsageComponent from './pipes-usage.component';
 
-import { PipesUsageComponent } from './pipes-usage.component';
 
 describe('PipesUsageComponent', () => {
   let component: PipesUsageComponent;
@@ -8,12 +10,19 @@ describe('PipesUsageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PipesUsageComponent]
+      imports: [
+        PipesUsageComponent, 
+        TitleComponent, 
+        FormsModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(PipesUsageComponent);
     component = fixture.componentInstance;
+
     fixture.detectChanges();
   });
 

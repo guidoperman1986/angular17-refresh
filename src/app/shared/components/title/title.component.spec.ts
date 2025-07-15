@@ -13,6 +13,8 @@ describe('TitleComponent', () => {
     .compileComponents();
     
     fixture = TestBed.createComponent(TitleComponent);
+    fixture.componentRef.setInput('title', 'Test Title');
+    fixture.componentRef.setInput('withShadow', true);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
