@@ -29,7 +29,6 @@ export default class UserComponent implements OnInit {
   );
 
   ngOnInit(): void {
-      console.log(this.id)
   }
 
   

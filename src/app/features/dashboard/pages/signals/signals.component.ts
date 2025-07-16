@@ -7,7 +7,7 @@ interface VideoForm {
   minutes: FormControl<number | null>
 }
 
-interface Video {
+export interface Video {
   id: number;
   title: string;
   duration: number;

@@ -37,7 +37,6 @@ describe('Output component testing', () => {
 
     it('should add value when showCount is invoked', ()=> {
         component.showCount();
-        console.log(component.clickCount);
     })
 
 

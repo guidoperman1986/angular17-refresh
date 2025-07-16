@@ -18,7 +18,6 @@ export class HeavyLoadersSlowComponent {
     while(Date.now() - start < 3000) {
 
     }
-    console.log('Cargado')
 
   }
 }

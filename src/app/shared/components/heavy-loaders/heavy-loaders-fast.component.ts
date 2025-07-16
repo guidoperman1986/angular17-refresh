@@ -16,6 +16,5 @@ export class HeavyLoadersFastComponent {
   @Input({required: true}) cssClass!: string;
 
   constructor() {
-    console.log('Ahora se cargo')
   }
 }
